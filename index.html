@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday My Love ❤️</title>
+
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     FLOATING HEARTS
+========================================= -->
+
+<div id="hearts-container"></div>
+
+
+
+<!-- =========================================
+     MUSIC BUTTON
+========================================= -->
+
+<button class="music-btn"
+        id="musicBtn"
+        onclick="toggleMusic()">
+
+    🎵
+
+</button>
+
+
+<audio id="birthdayMusic" loop>
+
+    <source src="music/birthday.mp3"
+            type="audio/mpeg">
+
+</audio>
+
+
+
+<!-- =========================================
+     HERO SECTION
+========================================= -->
+
+<section class="hero"
+         id="home">
+
+
+    <div class="hero-content">
+
+
+        <div class="small-text">
+
+            ✨ A little surprise for you ✨
+
+        </div>
+
+
+        <h1>
+
+            Happy Birthday
+
+            <span>
+                My Love ❤️
+            </span>
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            Today isn't just another day...
+
+            It's the day someone incredibly
+            special came into this world.
+
+        </p>
+
+
+        <button class="main-btn"
+                onclick="startSurprise()">
+
+            Open Your Surprise 🎁
+
+        </button>
+
+
+    </div>
+
+
+    <div class="scroll-down">
+
+        ↓ Scroll down
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================
+     INTRODUCTION
+========================================= -->
+
+<section class="intro-section">
+
+
+    <div class="intro-image">
+
+        <img src="images/puzzle-photo.jpeg"
+             alt="My Favourite Person">
+
+    </div>
+
+
+
+    <div class="intro-text">
+
+
+        <span class="mini-title">
+
+            ❤️ To The Most Special Person
+
+        </span>
+
+
+        <h2>
+
+            You Make My World Beautiful
+
+        </h2>
+
+
+        <p>
+
+            There are millions of people
+            in this world,
+
+            but somehow I got lucky enough
+            to meet you.
+
+        </p>
+
+
+        <p>
+
+            Every smile, every conversation,
+            every little moment with you
+            has become something I treasure.
+
+        </p>
+
+
+        <div class="handwritten">
+
+            You are one of my favourite
+            parts of my life. ❤️
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================
+     LOVE LETTER
+========================================= -->
+
+<section class="message-section">
+
+
+    <div class="section-title">
+
+        <span>💌</span>
+
+        <h2>
+            A Message For You
+        </h2>
+
+        <p>
+            Something from my heart...
+        </p>
+
+    </div>
+
+
+
+    <div class="letter">
+
+
+        <div class="letter-top">
+            💗
+        </div>
+
+
+        <p>
+            "My" Acharekarrrr,
+        </p>
+
+
+        <p>
+
+            Happy Birthday to the most
+            beautiful person who has made
+            my life brighter just by being
+            in it.
+
+        </p>
+
+
+        <p>
+
+            Your smile, your laugh,
+            your little habits,
+
+            and even the things you don't
+            realize you do make you
+            incredibly special to me.
+
+        </p>
+
+
+        <p>
+
+            I hope this birthday brings you
+            happiness, beautiful memories
+            and everything your heart
+            wishes for.
+
+        </p>
+
+
+        <p>
+
+            And hopefully...
+
+            I get to be there for many
+            of those smiles. ❤️
+
+        </p>
+
+
+        <div class="signature">
+
+            Forever yours ❤️
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================
+     PHOTO LOVE PUZZLE
+========================================= -->
+
+<section class="game-section"
+         id="game">
+
+
+    <div class="section-title">
+
+        <span>🧩</span>
+
+        <h2>
+            Put Our Memory Together
+        </h2>
+
+        <p>
+
+            Every little piece belongs
+            together ❤️
+
+        </p>
+
+    </div>
+
+
+
+    <div class="photo-puzzle-card">
+
+
+        <div class="puzzle-header">
+
+
+            <span>
+                💗
+            </span>
+
+
+            <h3>
+
+                Our Special Memory
+
+            </h3>
+
+
+            <p>
+
+                Click two pieces to swap them.
+
+                Complete the photo to unlock
+                your special message.
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- PUZZLE -->
+
+        <div class="photo-puzzle"
+             id="photoPuzzle">
+
+        </div>
+
+
+
+        <!-- BUTTONS -->
+
+        <div class="puzzle-controls">
+
+
+            <button class="shuffle-btn"
+                    onclick="shufflePhotoPuzzle()">
+
+                🔀 Shuffle Puzzle
+
+            </button>
+
+
+            <button class="hint-btn"
+                    onclick="showPuzzleHint()">
+
+                💡 Hint
+
+            </button>
+
+
+        </div>
+
+
+
+        <div class="puzzle-progress">
+
+            <span id="puzzleMoves">
+
+                Moves: 0
+
+            </span>
+
+        </div>
+
+
+
+        <p class="puzzle-message"
+           id="photoPuzzleMessage">
+
+            Arrange the pieces to reveal
+            our special memory ❤️
+
+        </p>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================
+     OUR MEMORIES
+========================================= -->
+
+<section class="memories">
+
+
+    <div class="section-title">
+
+
+        <span>
+            📸
+        </span>
+
+
+        <h2>
+            Our Little Memories
+        </h2>
+
+
+        <p>
+
+            Three moments I never want
+            to forget ❤️
+
+        </p>
+
+
+    </div>
+
+
+
+    <div class="memory-grid">
+
+
+
+        <!-- PHOTO 1 -->
+
+        <div class="memory-card">
+
+
+            <div class="memory-image">
+
+                <img src="images/photo1.jpeg"
+                     alt="Our Beginning">
+
+
+                <div class="image-heart">
+
+                    ❤️
+
+                </div>
+
+            </div>
+
+
+            <div class="memory-content">
+
+
+                <span class="memory-number">
+
+                    01
+
+                </span>
+
+
+                <h3>
+
+                    Our Beginning 🌹
+
+                </h3>
+
+
+                <p>
+
+                    Maybe this was just another
+                    moment for the world...
+
+                    but for me, it became one
+                    of those memories I'll always
+                    remember.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- PHOTO 2 -->
+
+        <div class="memory-card featured">
+
+
+            <div class="memory-image">
+
+                <img src="images/photo2.jpeg"
+                     alt="My Favourite">
+
+
+                <div class="image-heart">
+
+                    💗
+
+                </div>
+
+            </div>
+
+
+            <div class="memory-content">
+
+
+                <span class="memory-number">
+
+                    02
+
+                </span>
+
+
+                <h3>
+
+                    My Favourite 💕
+
+                </h3>
+
+
+                <p>
+
+                    Some moments don't need
+                    a long story.
+
+                    They simply become memories
+                    that stay in your heart.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- PHOTO 3 -->
+
+        <div class="memory-card">
+
+
+            <div class="memory-image">
+
+                <img src="images/photo3.jpeg"
+                     alt="A Special Moment">
+
+
+                <div class="image-heart">
+
+                    💜
+
+                </div>
+
+            </div>
+
+
+            <div class="memory-content">
+
+
+                <span class="memory-number">
+
+                    03
+
+                </span>
+
+
+                <h3>
+
+                    A Special Moment ✨
+
+                </h3>
+
+
+                <p>
+                    
+                    Flowers are beautiful...
+
+                    but somehow you still managed
+                    to be the most beautiful thing
+                    in the picture.
+                    
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================
+     PHOTO GALLERY
+========================================= -->
+
+<!-- ================= VIDEO GALLERY ================= -->
+
+<section class="gallery-section" id="gallery">
+
+    <div class="section-title">
+        <span>🎥</span>
+        <h2>Our Special Memory</h2>
+        <p>A little video of some beautiful moments ❤️</p>
+    </div>
+
+    <div class="video-gallery">
+
+        <div class="gallery-video-card">
+
+            <video id="memoryVideo"
+                   class="memory-video"
+                   preload="metadata"
+                   playsinline
+                   poster="images/photo1.jpg">
+
+                <source src="videos/birthday-memory.mp4"
+                        type="video/mp4">
+
+                Your browser does not support video playback.
+
+            </video>
+
+            <!-- Play Button -->
+            <div class="video-overlay"
+                 id="videoOverlay"
+                 onclick="toggleMemoryVideo()">
+
+                <div class="video-play-button"
+                     id="videoPlayButton">
+                    ▶
+                </div>
+
+            </div>
+
+            <div class="video-label">
+                🎥 Our Special Memory
+            </div>
+
+            <div class="video-info">
+
+                <div>
+                    <h3>A Moment To Remember ❤️</h3>
+
+                    <p>
+                        Some moments are too special
+                        to be forgotten.
+                    </p>
+                </div>
+
+                <button class="fullscreen-btn"
+                        onclick="openVideoFullscreen(event)">
+                    ⛶
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     HEART CATCHING GAME
+========================================= -->
+
+<section class="heart-game">
+
+
+    <div class="section-title">
+
+
+        <span>
+            💖
+        </span>
+
+
+        <h2>
+
+            Catch My Hearts
+
+        </h2>
+
+
+        <p>
+
+            Catch 10 hearts before
+            they disappear!
+
+        </p>
+
+
+    </div>
+
+
+
+    <div class="heart-game-area"
+         id="heartGame">
+
+
+        <div class="score">
+
+            Hearts caught:
+
+            <span id="score">
+                0
+            </span>
+
+            /10
+
+        </div>
+
+
+        <button class="start-game"
+                onclick="startHeartGame()">
+
+            Start Game 💕
+
+        </button>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================
+     FINAL SURPRISE
+========================================= -->
+
+<section class="final-section"
+         id="final">
+
+
+    <div class="final-content">
+
+
+        <div class="gift"
+             onclick="openGift()">
+
+            🎁
+
+        </div>
+
+
+        <h2>
+
+            You Made It! ❤️
+
+        </h2>
+
+
+        <p>
+
+            You solved the puzzle,
+            caught my hearts...
+
+            Now there's one final
+            surprise waiting for you.
+
+        </p>
+
+
+        <button class="main-btn"
+                onclick="openGift()">
+
+            Open Your Gift 🎁
+
+        </button>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================
+     FINAL MODAL
+========================================= -->
+
+<div class="modal"
+     id="loveModal">
+
+
+    <div class="modal-content">
+
+
+        <button class="close-btn"
+                onclick="closeModal()">
+
+            ×
+
+        </button>
+
+
+        <div class="big-heart">
+
+            ❤️
+
+        </div>
+
+
+        <h2>
+
+            Happy Birthday,
+            Acharekarrrr!
+
+        </h2>
+
+
+        <p>
+
+            If I could give you one thing
+            today, I would give you the
+            ability to see yourself
+            through my eyes.
+
+        </p>
+
+
+        <p>
+
+            Then you would finally understand
+            how incredibly special you are
+            to me.
+
+        </p>
+
+
+        <p class="special-message">
+
+            I love you more than words
+            can explain. ❤️
+
+        </p>
+
+
+        <div class="final-signature">
+
+            — Your Tara 💕
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+
+    <p>
+
+        Made with ❤️ especially
+        for you
+
+    </p>
+
+
+    <p>
+
+        Happy Birthday 🎂
+
+    </p>
+
+
+</footer>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
